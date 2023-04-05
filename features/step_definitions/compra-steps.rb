@@ -20,8 +20,10 @@
     when "PIX"
         find("h2", text: "Pix").click
         find("strong", text: "O código Pix expira em 10 minutos.")
+    when "Boleto Bancário"
+    find("h2", text: "Boleto Bancário").click
+    find("div[class*='styles__BottomText']")
     end
-    
   end
   
   Dado('clique em ir para revisão') do
@@ -38,4 +40,10 @@
 
     expect(elemento1.visible?).to be true
     expect(elemento2.visible?).to be true
+  end
+
+  Então('visualizo um botão para copiar o código do boleto') do
+    elemento = find("span", text: "Copiar código do boleto")
+
+    expect(elemento.visible?).to be true
   end
