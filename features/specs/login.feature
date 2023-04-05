@@ -9,11 +9,11 @@ Funcionalidade: Login
 
   @login_assinatura
   Cenário: Login pelo menu de assinatura
-    Dado que eu acesse a tela de assinatura
+    Dado que eu acesse a tela de compra programada
     Quando clique no botão entrar
     E seleciono a opção email e senha
     E realize login com "gabriel.lopes@cobasi.com.br" e "Cobasi@123"
-    Então devo ser redirecionado para a tela de assinatura
+    Então devo ser redirecionado para a tela de compra programada
 
   @login_com_falha
   Esquema do Cenario: Realizar login com falha

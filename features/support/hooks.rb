@@ -1,5 +1,7 @@
 Before do
   visit "./"
+  find("#adopt-accept-all-button").click #usandoId
+  #find("button", text: "Aceitar").click
   # page.current_window.resize_to(1440, 900)
 end
 
