@@ -22,8 +22,8 @@ Dado('que eu acesse a tela de login') do
     expect(alerta.visible?).to be true
   end
 
-  Dado('que eu acesse a tela de assinatura') do
-    find(:xpath,'//li[contains(@class, "styles__ListLink")]//a[text()="Assinatura"]').click
+  Dado('que eu acesse a tela de compra programada') do
+    find(:xpath,'//li[contains(@class, "styles__ListLink")]//a[text()="Compra Programada"]').click
   end
   
   Quando('clique no botão entrar') do
@@ -31,7 +31,7 @@ Dado('que eu acesse a tela de login') do
     switch_to_window(windows.last)
   end
   
-  Então('devo ser redirecionado para a tela de assinatura') do
+  Então('devo ser redirecionado para a tela de compra programada') do
     elemento = find("h2", text:"Sua conta")
     expect(elemento.visible?).to be true
   end
