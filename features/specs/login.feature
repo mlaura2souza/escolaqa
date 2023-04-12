@@ -1,14 +1,15 @@
 # language: pt
 Funcionalidade: Login
 
+@login
   Cenário: Realizar login com sucesso
     Dado que eu acesse a tela de login
     E seleciono a opção email e senha
     E realize login com "gabriel.lopes@cobasi.com.br" e "Cobasi@123"
     Então devo estar logado com sucesso
 
-  @login_assinatura
-  Cenário: Login pelo menu de assinatura
+  @login_compra_programada
+  Cenário: Login pelo menu de compra programada
     Dado que eu acesse a tela de compra programada
     Quando clique no botão entrar
     E seleciono a opção email e senha

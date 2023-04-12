@@ -1,16 +1,13 @@
 Dado('que eu acesse a tela de login') do
-    find("div[class*='styles__Sign']").click
+    @homePage.clique_login()
   end
   
   Dado('seleciono a opção email e senha') do
-    find("span", text: "Entrar com email e senha").click
+    @loginPage.opcao_login("email e senha")
   end
   
   Dado('realize login com {string} e {string}') do |email, senha|
-    find("#email").set email
-    find("#password").set senha
-    btn = find_all("button", text: "Entrar")
-    btn[0].click
+    @loginPage.acessar_conta(email, senha)
   end
   
   Então('devo estar logado com sucesso') do
@@ -23,12 +20,11 @@ Dado('que eu acesse a tela de login') do
   end
 
   Dado('que eu acesse a tela de compra programada') do
-    find(:xpath,'//li[contains(@class, "styles__ListLink")]//a[text()="Compra Programada"]').click
+    @homePage.menu_cabecalho("Compra Programada")
   end
   
   Quando('clique no botão entrar') do
-    find("a", text: "Entrar").click
-    switch_to_window(windows.last)
+    @compraProgramadaPage.clique_entrar()
   end
   
   Então('devo ser redirecionado para a tela de compra programada') do
