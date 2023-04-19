@@ -7,6 +7,8 @@ gem 'cucumber'
 gem 'rspec'
 gem 'selenium-webdriver'
 
+gem 'report_builder'
+
 gem 'allure-cucumber'
 
 # gems para dados fakes
